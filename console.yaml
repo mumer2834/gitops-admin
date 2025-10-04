@@ -3,7 +3,7 @@ kind: Console
 metadata:
   name: cluster
   annotations:
-    CHANGE_ME
+    argocd.argoproj.io/sync-options: ServerSideApply=true,Validate=false
 spec:
   customization:
-    customProductName: CHANGE_ME
+    customProductName: Metal
