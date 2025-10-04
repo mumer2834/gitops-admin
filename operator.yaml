@@ -21,7 +21,7 @@ spec:
   channel: stable
   installPlanApproval: Automatic
   name: compliance-operator
-  source: do380-catalog-cs
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
 ---
 apiVersion: compliance.openshift.io/v1alpha1
@@ -38,4 +38,5 @@ metadata:
   name: nist-moderate
   namespace: openshift-compliance
   annotations:
-    CHANGE_ME
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
